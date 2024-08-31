@@ -1,28 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
-
-main{
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
 }
-.left{
+.left {
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-
 }
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
-.logo >h1 {
+.logo > h1 {
     font-size: x-large;
     font-weight: 900;
 }
@@ -30,32 +28,33 @@ main{
     font-family: "Roboto", sans-serif;
     font-weight: 800;
     font-style: normal;
-  }
+}
 .roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
-.right{
+.right {
     background-color: #edfffd;
 }
-nav{
+nav {
     display: flex;
     padding: 30px;
     justify-content: space-around;
+    border-color: #000000;
+    border-style: double;
     align-items: center;
     gap: 5px;
 }
-nav >h2{
+nav > h2 {
     cursor: pointer;
 }
 .roboto-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-
-.sign{
+}
+.sign {
     text-decoration: none;
     align-items: center;
     background-color: #0A66C2;
@@ -65,7 +64,7 @@ nav >h2{
     color: #ffffff;
     cursor: pointer;
     display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 600;
     justify-content: center;
@@ -79,10 +78,10 @@ nav >h2{
     text-align: center;
     vertical-align: middle;
 }
-.sign:hover{
+.sign:hover {
     opacity: 90%;
 }
-.content{
+.content {
     margin-left: 30px;
     display: flex;
     justify-content: center;
@@ -90,20 +89,16 @@ nav >h2{
     height: 70vh;
     padding: 30px;
 }
-  
-.content > p{
+.content > p {
     line-height: 8px;
-    
 }
-
 .content > div > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.btn{
+.btn {
     background-color: #ee6b29;
     border: none;
     color: #fff;
@@ -116,10 +111,10 @@ nav >h2{
     cursor: pointer;
     text-decoration: none;
 }
-.btn:hover{
+.btn:hover {
     opacity: 90%;
 }
-.icons{
+.icons {
     margin: 20px;
     margin-left: 50px;
 }
@@ -129,6 +124,70 @@ nav >h2{
     margin: 5px;
     cursor: pointer;
 }
-.icons > img:hover{
+.icons > img:hover {
     transform: translateY(-5px);
+}
+/* Media Queries */
+
+/* Mobile */
+@media (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        margin-left: 0;
+        flex-direction: row;
+        height: auto;
+        padding: 15px;
+    }
+
+    .sign {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav {
+        flex-direction: row;
+        border: #000000;
+        border-radius: 10px;
+        border-style: double;
+        padding: 15px;
+    }
+
+    .icons {
+        margin: 10px;
+        margin-left: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content {
+        margin-left: 15px;
+        padding: 20px;
+    }
+
+    .sign {
+        font-size: 15px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    .icons {
+        margin: 15px;
+        margin-left: 30px;
+    }
+}
+/* Desktop */
+@media (min-width: 1025px) {
 }

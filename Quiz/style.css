@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/logo.png);
     margin: 0;
     padding: 0;
 }
@@ -9,7 +10,7 @@ body {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #dbd0d0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
@@ -17,17 +18,19 @@ body {
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #1d1212;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 h2 {
     margin-bottom: 15px;
-    color: #555;
+    color: #460000;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .progress-container {
     width: 100%;
-    background-color: #eee;
+    background-color: #331616;
     border-radius: 20px;
     margin-bottom: 20px;
     height: 15px;
@@ -36,7 +39,7 @@ h2 {
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #4caf50;
+    background-color: #a11111;
     border-radius: 20px;
     transition: width 0.4s ease;
 }
@@ -61,16 +64,16 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    background-color: #f5f5f5;
-    border: 2px solid #ddd;
+    background-color: #ffffff;
+    border: 2px solid #ff0000;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
 .option-content img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
 }
 
 .option-content span {
@@ -80,7 +83,7 @@ h2 {
 
 .option:hover .option-content {
     background-color: #e0e0e0;
-    transform: scale(1.05);
+    transform:scale3d(1.05);
 }
 
 input{
@@ -129,4 +132,54 @@ input{
 
 #prev-button:hover {
     background-color: #ec971f;
+}
+
+/* Media Queries */
+
+/* Mobile */
+@media (max-width: 767px) {
+    .quiz-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .option {
+        width: 100%;
+    }
+
+    .option-content img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .quiz-container {
+        margin: 30px;
+        padding: 20px;
+    }
+
+    .option {
+        width: 48%;
+    }
+
+    .option-content img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .button {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
 }
